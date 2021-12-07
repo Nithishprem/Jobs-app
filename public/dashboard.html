@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Jobs App</title>
+  </head>
+  <body class="hide">
+    <nav class="nav-bar">
+      <h1 class="title">My Jobs</h1>
+      <div class="profile-container">
+        <div class="btn profile-btn">
+          <i class="fas fa-user-circle"></i>
+          <div class="username">Hello</div>
+          <i class="fas fa-caret-down"></i>
+        </div>
+        <div class="btn logout">Logout</div>
+      </div>
+    </nav>
+    <div class="alert">Job added successfully !</div>
+    <form class="form job-form">
+      <div class="form-grp">
+        <input
+          type="text"
+          name="position"
+          class="form-input"
+          id="form-position"
+          placeholder="Position"
+          value
+        />
+      </div>
+      <div class="form-grp">
+        <input
+          type="text"
+          name="company"
+          class="form-input"
+          id="form-company"
+          placeholder="Company"
+          value
+        />
+      </div>
+      <button class="btn btn-submit" type="submit">Add Job</button>
+    </form>
+    <div class="jobs-table">
+      <div class="table-head">
+        <div class="position">Position</div>
+        <div class="company">Company</div>
+        <div class="date">Date</div>
+        <div class="status">Status</div>
+        <div class="action">Action</div>
+      </div>
+      <div class="table-body">
+        <!-- <div class="table-row">
+          <div class="position">Full stack developer</div>
+          <div class="company">Google</div>
+          <div class="date">December 6th, 2021</div>
+          <div class="status">Pending</div>
+          <div class="action">
+            <a href="edit.html?61ae16802188104fb461336f">
+              <i class="fas fa-edit"></i>
+            </a>
+            <i
+              class="fas fa-trash delete-job"
+              data-id="61ae16802188104fb461336f"
+            ></i>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
