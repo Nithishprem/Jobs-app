@@ -8,7 +8,7 @@ const duplicateEmail = 'duplicate value enter for email field'
 
 const registerUser = async ()=>{
     try{
-    const res = await fetch('http://localhost:3000/api/v1/auth/register',{
+    const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/auth/register',{
     method: 'POST',
     headers: {
         'Content-type': 'application/json',

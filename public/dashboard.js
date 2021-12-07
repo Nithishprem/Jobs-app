@@ -15,7 +15,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
  const showJobs = async(token)=>{
     try{
-        const res = await fetch('http://localhost:3000/api/v1/jobs',{
+        const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/jobs',{
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -61,7 +61,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
  const createFormJob = async(token)=>{
     try{
-        const res = await fetch('http://localhost:3000/api/v1/jobs',{
+        const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/jobs',{
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -99,7 +99,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 
 const deleteDashboardJob = async(token,id)=>{
     try{
-        const res = await fetch(`http://localhost:3000/api/v1/jobs/${id}`,{
+        const res = await fetch(`https://jobs-app-v8.herokuapp.com/api/v1/jobs/${id}`,{
         method: 'DELETE',
         headers: {
             "Authorization": `Bearer ${token}`,

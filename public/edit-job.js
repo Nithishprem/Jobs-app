@@ -15,7 +15,7 @@ usernameDOM.innerHTML =username
 
 const getSingleJob = async(token)=>{
     try{
-        const res = await fetch(`http://localhost:3000/api/v1/jobs/${id}`,{
+        const res = await fetch(`https://jobs-app-v8.herokuapp.com/api/v1/jobs/${id}`,{
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -47,7 +47,7 @@ const getSingleJob = async(token)=>{
 
 const editJob = async(token)=>{
     try{
-        const res = await fetch(`http://localhost:3000/api/v1/jobs/${id}`,{
+        const res = await fetch(`https://jobs-app-v8.herokuapp.com/api/v1/jobs/${id}`,{
            method: 'PATCH',
            headers: {
                'Authorization': `Bearer ${token}`,

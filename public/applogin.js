@@ -7,7 +7,7 @@ const alertDOM = document.querySelector('.alert')
 
 const loginUser = async ()=>{
     try{
-    const res = await fetch('http://localhost:3000/api/v1/auth/login',{
+    const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/auth/login',{
     method: 'POST',
     headers: {
         'Content-type': 'application/json',
