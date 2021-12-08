@@ -16,6 +16,9 @@
   --green-light: #c1ffe2;
   --green-dark: #0f5132;
   --black: #000000;
+  --sea-green: #2cb1aa;
+  --cerise-red: #e43d7b;
+  --mustard: #7f7f00;
 }
 
 * {
@@ -30,17 +33,17 @@ a {
 
 .btn {
   cursor: pointer;
-  color: var(--white);
-  background-color: var(--primary-color);
+  color: var(--mustard);
+  background-color: var(--sea-green);
   display: inline-block;
   outline: none;
   border: none;
   border-radius: 0.2em;
   transition: 0.4s background-color;
 }
-.btn:hover {
+/* .btn:hover {
   background-color: var(--primary-700);
-}
+} */
 
 body {
   width: 100vw;
@@ -48,7 +51,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-size: 16px;
-  background-color: var(--grey-100);
+  background-color: var(--sea-green);
   font-family: "Roboto", sans-serif;
   padding: 0 15vw;
 }
@@ -66,7 +69,7 @@ body {
 
 .title {
   font-size: 2em;
-  color: var(--primary-color);
+  color: var(--black);
   align-self: center;
   padding: 0.5em 0;
 }
@@ -84,6 +87,7 @@ body {
   align-items: center;
   padding: 0.5em;
   margin-bottom: 0.5em;
+  background-color: var(--black);
 }
 
 .profile-btn i,
@@ -93,24 +97,21 @@ body {
 
 .logout {
   padding: 0.6em;
-  background: var(--white);
-  color: var(--primary-color);
+  background: var(--black);
   text-align: center;
   transition: none;
   visibility: hidden;
 }
-.logout:hover {
-  background-color: var(--white);
-}
 
 .form {
   margin: 1em auto 3em;
-  background-color: var(--white);
+  background-color: var(--black);
   border-radius: 0.3em;
   padding: 2em 2.5em;
   display: grid;
   grid-template-columns: repeat(2, 2.5fr) 1fr;
   grid-gap: 2em;
+  border-top: 0.3em solid #7f7f00;
 }
 
 @media (max-width: 800px) {
@@ -141,6 +142,7 @@ body {
 .job-form button {
   padding: 0.7em 0.8em;
   font-size: 1em;
+  color: var(--black);
 }
 
 .jobs-table {
@@ -181,6 +183,7 @@ body {
   background: rgb(247, 243, 215);
   padding: 0.2em 0.5em;
   border-radius: 0.2em;
+  text-align: center;
 }
 .table-row .action {
   margin-top: 0.2em;
@@ -198,8 +201,8 @@ body {
 .fa-trash {
   color: var(--red-dark);
 }
-.fas-edit {
-  columns: var(--green-dark);
+.fa-edit {
+  color: var(--sea-green);
 }
 
 @media (max-width: 900px) {

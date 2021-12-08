@@ -8,8 +8,12 @@
   --grey-200: #e2e8f0;
   --grey-400: #c7d4e2;
   --white: #fff;
+  --black: #000000;
   --red-light: #f8d7da;
   --red-dark: #842029;
+  --sea-green: #2cb1aa;
+  --cerisel-red: #e479a0;
+  --mustard: #7f7f00;
 }
 
 * {
@@ -24,25 +28,27 @@ a {
 
 .btn {
   cursor: pointer;
-  color: var(--white);
-  background-color: var(--primary-color);
+  color: var(--black);
+  background-color: var(--sea-green);
   display: inline-block;
   outline: none;
   border: none;
   border-radius: 0.2em;
   transition: all 0.4s;
 }
-.btn:hover {
-  background-color: var(--primary-700);
+.hero-btn {
+  color: var(--cerisel-red);
+  background-color: var(--black);
 }
+/* .btn:hover {
+  background-color: var(--primary-700);
+} */
 
 body {
   width: 100vw;
-  min-height: 100vw;
   overflow-x: hidden;
-  overflow-y: scroll;
   font-size: 16px;
-  background-color: var(--grey-50);
+  background-color: var(--sea-green);
   font-family: "Roboto", sans-serif;
 }
 
@@ -51,13 +57,14 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: var(--grey-200);
+  background-color: var(--black);
+  border-bottom: 0.3em solid var(--mustard);
   /* height: 4em; */
 }
 
 .title {
   font-size: 2em;
-  color: var(--primary-color);
+  color: var(--sea-green);
   padding: 0.5em 2em;
 }
 
@@ -72,7 +79,6 @@ body {
   .nav-bar {
     flex-direction: column;
     width: 100%;
-    background-color: var(--grey-200);
   }
   .api-link {
     padding: 0.2em;
@@ -106,7 +112,8 @@ body {
 
 .info p {
   width: 80%;
-  line-height: 1.8em;
+  font-size: 1.1em;
+  line-height: 1.6em;
 }
 
 .hero-btn {
@@ -144,25 +151,26 @@ body {
 
 .form {
   margin: 3em auto;
-  background-color: var(--white);
-  border-radius: 0.3em;
-  border-top: 5px solid var(--primary-color);
+  background-color: #000000;
+  border-radius: 0.5em;
+  border-top: 0.3em solid #7f7f00;
   padding: 2em 2.5em;
-  box-shadow: 3px 3px 20px -3px rgba(0, 0, 0, 0.1),
-    -3px 3px 10px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 20px -3px rgb(0 0 0 / 10%),
+    -3px 3px 10px -3px rgb(0 0 0 / 10%);
 }
 
 .form h4 {
   text-align: center;
-  font-size: 1.5em;
-  color: var(--primary-color);
+  font-size: 2em;
+  color: var(--sea-green);
   margin-bottom: 0.7em;
 }
 .form h3 {
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: 400;
   margin-bottom: 1em;
+  color: var(--cerisel-red);
 }
 
 .form-grp {
@@ -172,7 +180,8 @@ body {
 .form-label {
   display: block;
   margin-bottom: 0.5em;
-  font-size: 0.9em;
+  font-size: 1em;
+  color: var(--sea-green);
 }
 
 .form-input {
@@ -193,17 +202,19 @@ body {
 .btn-submit {
   width: 100%;
   padding: 0.4em 0.7em;
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 1em;
 }
 
 .form p {
   text-align: center;
   margin-top: 1em;
+  color: var(--cerisel-red);
+  font-size: 1.1em;
 }
 
 .form p a {
-  color: var(--primary-color);
+  color: var(--sea-green);
 }
 
 .show {
@@ -215,7 +226,10 @@ body {
     flex-direction: column;
   }
   .home-img {
-    display: none;
+    /* display: none; */
+    width: 60%;
+    height: auto;
+    margin: 2em auto 0;
   }
   .info {
     display: flex;
@@ -224,16 +238,25 @@ body {
     /* margin: auto; */
   }
   .info h1 {
-    margin-top: 20vw;
-    font-size: 2em;
+    /* margin-top: 5vw; */
+    font-size: 1.7em;
   }
   .info p {
     width: 90%;
     text-align: center;
+    font: 0.9em;
+    line-height: 1.4em;
   }
+
+  .hero-btn {
+    margin-top: 1em;
+    font-size: 1.1em;
+    padding: 0.5em 1.25em;
+  }
+
   .form {
-    background-color: var(--grey-50);
-    border-top: none;
+    /* background-color: var(--grey-50); */
+    /* border-top: none; */
     box-shadow: none;
     margin: 1em auto 2em;
   }

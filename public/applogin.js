@@ -7,7 +7,7 @@ const alertDOM = document.querySelector('.alert')
 const loginbtnDOM = document.querySelector('.btn-submit')
 
 const loginUser = async ()=>{
-    loginbtnDOM.innerHTML = `fecting user...`
+    loginbtnDOM.innerHTML = `fetching user...`
     try{
     const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/auth/login',{
     method: 'POST',
