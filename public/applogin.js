@@ -1,11 +1,13 @@
-//registration handler
+//login handler
 
 // const nameDOM = document.querySelector('.name')
 const emailDOM = document.querySelector('.email')
 const passwordDOM = document.querySelector('.password')
 const alertDOM = document.querySelector('.alert')
+const loginbtnDOM = document.querySelector('.btn-submit')
 
 const loginUser = async ()=>{
+    loginbtnDOM.innerHTML = `fecting user...`
     try{
     const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/auth/login',{
     method: 'POST',
@@ -42,6 +44,7 @@ const loginUser = async ()=>{
         alertDOM.classList.remove('show')
     },2000)
 }
+    loginbtnDOM.innerHTML = `Login`
 }
 
 document.querySelector('.login-form').addEventListener('submit', (e)=>{

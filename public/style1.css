@@ -182,13 +182,17 @@ body {
   padding: 0.2em 0.5em;
   border-radius: 0.2em;
 }
+.table-row .action {
+  margin-top: 0.2em;
+}
 
 .table-row .action i {
-  padding-right: 1em;
+  padding: 0 0.5em;
 }
 
 .fas {
   cursor: pointer;
+  font-size: 1.2em;
 }
 
 .fa-trash {
@@ -226,7 +230,7 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .jobs-table .table-body {
     display: grid;
     grid-template-columns: 1fr;

@@ -5,8 +5,11 @@ const emailDOM = document.querySelector('.email')
 const passwordDOM = document.querySelector('.password')
 const alertDOM = document.querySelector('.alert')
 const duplicateEmail = 'duplicate value enter for email field'
+const registerbtnDOM = document.querySelector('.btn-submit')
+const passwordShort = `password`
 
 const registerUser = async ()=>{
+    registerbtnDOM.innerHTML = `fecthing data...`
     try{
     const res = await fetch('https://jobs-app-v8.herokuapp.com/api/v1/auth/register',{
     method: 'POST',
@@ -40,7 +43,14 @@ const registerUser = async ()=>{
             setTimeout(()=>{
                 alertDOM.classList.remove('show')
             },2000)
-    }else{
+    }else if(message.indexOf(passwordShort)>=0){
+        alertDOM.innerHTML = `Password length should be greater than 6 characters`
+        alertDOM.classList.add('show')
+        setTimeout(()=>{
+            alertDOM.classList.remove('show')
+        },2000)
+}
+    else{
         alertDOM.innerHTML = error.message
             alertDOM.classList.add('alert-danger')
             setTimeout(()=>{
@@ -48,7 +58,7 @@ const registerUser = async ()=>{
             },2000)
         }
     }
-
+    registerbtnDOM.innerHTML = `Register`
 }
 
 
