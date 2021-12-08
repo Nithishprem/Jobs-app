@@ -39,7 +39,8 @@ a {
 body {
   width: 100vw;
   min-height: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   font-size: 16px;
   background-color: var(--grey-50);
   font-family: "Roboto", sans-serif;
